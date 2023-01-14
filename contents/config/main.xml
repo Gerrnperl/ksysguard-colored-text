@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name=""/>
+
+    <group name="General">
+        <entry name="autoRange" type="Bool">
+            <label>Auto data range</label>
+            <default>true</default>
+        </entry>
+        <entry name="rangeFrom" type="Double">
+            <label>Range from</label>
+            <default>0</default>
+        </entry>
+        <entry name="rangeFromMultiplier" type="Double">
+            <default>0.9</default>
+        </entry>
+        <entry name="rangeTo" type="Double">
+            <label>Range to</label>
+            <default>100</default>
+        </entry>
+        <entry name="rangeToMultiplier" type="Double">
+            <default>1.1</default>
+        </entry>
+        <entry name="enableColorGradient" type="Bool">
+            <label>Enable color gradient</label>
+            <default>true</default>
+        </entry>
+        <entry name="colorGradientFrom" type="color">
+            <label>Color gradient from</label>
+            <default>#00ff00</default>
+        </entry>
+        <entry name="colorGradientTo" type="color">
+            <label>Color gradient to</label>
+            <default>#ff0004</default>
+        </entry>
+        <entry name="showBar" type="Bool">
+            <label>Show percentage bar</label>
+            <default>true</default>
+        </entry>
+        <entry name="barPosition" type="String">
+            <label>Bar position</label>
+            <default>bottom</default>
+        </entry>
+    </group> 
+</kcfg>
