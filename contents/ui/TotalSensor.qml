@@ -35,6 +35,7 @@ ColumnLayout {
 
 	Sensors.Sensor {
 		id: sensor
+		updateRateLimit: root.controller.updateRateLimit
 		sensorId: root.controller.totalSensors[0]
 	}
 
