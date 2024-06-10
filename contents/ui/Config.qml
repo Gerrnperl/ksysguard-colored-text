@@ -1,6 +1,6 @@
 import QtQuick 2.9
 import QtQuick.Layouts 1.1
-import QtQuick.Dialogs
+import QtQuick.Dialogs 1.0
 import QtQuick.Controls 2.2 as Controls
 
 import org.kde.kirigami 2.8 as Kirigami
@@ -101,9 +101,9 @@ Kirigami.FormLayout {
 			ColorDialog {
 				id: fromColorDialog
 				title: i18n("Please choose a color")
-				selectedColor: cfg_colorGradientFrom
+				color: cfg_colorGradientFrom
 				onAccepted: {
-					cfg_colorGradientFrom = fromColorDialog.selectedColor
+					cfg_colorGradientFrom = fromColorDialog.color
 				}
 				visible: false
 				modality: Qt.WindowModal
@@ -132,9 +132,9 @@ Kirigami.FormLayout {
 			ColorDialog {
 				id: toColorDialog
 				title: i18n("Please choose a color")
-				selectedColor: cfg_colorGradientTo
+				color: cfg_colorGradientTo
 				onAccepted: {
-					cfg_colorGradientTo = toColorDialog.selectedColor
+					cfg_colorGradientTo = toColorDialog.color
 				}
 				visible: false
 				modality: Qt.WindowModal
