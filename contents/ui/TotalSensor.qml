@@ -8,7 +8,7 @@ import org.kde.ksysguard.faces 1.0 as Faces
 import org.kde.ksysguard.sensors 1.0 as Sensors
 
 
-ColumnLayout {
+RowLayout {
 	id: total
 
 	Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
@@ -21,6 +21,9 @@ ColumnLayout {
 	readonly property color colorGradientTo: controller.faceConfiguration.colorGradientTo
     readonly property bool showBar: controller.faceConfiguration.showBar
     readonly property string barPosition: controller.faceConfiguration.barPosition
+
+    readonly property int gap: controller.faceConfiguration.gap
+	readonly property int barWidth: controller.faceConfiguration.barWidth
 
     ColorUtils.Gradien {
         id : gradien
@@ -43,6 +46,8 @@ ColumnLayout {
 		id: main
 		columns : total.barPosition == "bottom" ? 1 : 2
 		Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
+		rowSpacing: total.barPosition == "bottom" ? (total.gap || 2) : 0
+		columnSpacing: total.barPosition == "bottom" ? 0 : (total.gap || 2)
 		TextSensor {
 			Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
 			id: textSensor

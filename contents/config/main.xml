@@ -44,5 +44,18 @@
             <label>Bar position</label>
             <default>bottom</default>
         </entry>
+        <entry name="fontsize" type="Int">
+            <label>Font size</label>
+            <default>0</default>
+        </entry>
+        <entry name="barWidth" type="Int">
+            <label>Bar width</label>
+            <default>3</default>
+        </entry>
+        <entry name="gap" type="Int">
+            <label>Gap</label>
+            <default>2</default>
+        </entry>
     </group> 
+
 </kcfg>

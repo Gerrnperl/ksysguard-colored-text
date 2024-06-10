@@ -14,7 +14,8 @@ RowLayout {
 	property color actualColor 
     property string sensorValue
 	property string sensorName
-    // property int fixed_width
+	// property int fixed_width
+	readonly property int fontsize: controller.faceConfiguration.fontsize
 
 	id: sensor
 	Layout.fillHeight: true 
@@ -24,7 +25,6 @@ RowLayout {
     // Layout.preferredWidth: fixed_width
     Layout.minimumWidth: 50
     // Layout.maximumWidth: fixed_width
-
     Controls.Label {
         Layout.alignment: Qt.AlignLeft
         id: itemLabel
@@ -33,7 +33,7 @@ RowLayout {
         z:1
         horizontalAlignment: Text.AlignHCenter
         text: sensorName
-        font.pointSize: Kirigami.Theme.defaultFont.pointSize * 0.8
+        font.pointSize: sensor.fontsize ||  Kirigami.Theme.defaultFont.pointSize * 0.8
         antialiasing : true        
     }
     Controls.Label {
@@ -44,7 +44,7 @@ RowLayout {
         z:1
         horizontalAlignment: Text.AlignHCenter
         text: sensorValue
-        font.pointSize: Kirigami.Theme.defaultFont.pointSize * 0.8
+        font.pointSize: sensor.fontsize ||  Kirigami.Theme.defaultFont.pointSize * 0.8
         antialiasing : true        
     }
 }
