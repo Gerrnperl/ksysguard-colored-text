@@ -21,6 +21,9 @@ Kirigami.FormLayout {
 	property alias cfg_colorGradientTo: colorGradientToColorbox.color
 	property alias cfg_showBar: showBarCheckbox.checked
 	property string cfg_barPosition: controller.faceConfiguration.barPosition
+	property alias cfg_fontsize: fontsizeSpin.value
+	property alias cfg_barWidth: barWidthSpin.value
+	property alias cfg_gap: gapSpin.value
 
 	Layout.fillWidth: true
     Layout.alignment: Qt.AlignHCenter
@@ -177,4 +180,54 @@ Kirigami.FormLayout {
             }
         }
 	}
+
+	Kirigami.Separator {
+		Kirigami.FormData.isSection: true
+	}
+
+	ColumnLayout {
+		Kirigami.FormData.label: "Size"
+		spacing: 10
+		Layout.alignment: Qt.AlignHCenter
+
+		Row {
+			spacing: 20
+			Controls.Label {
+				text: i18n("Font size: ")
+			}
+			Controls.SpinBox {
+				id: fontsizeSpin
+				value: fontsize
+				Layout.preferredWidth: Kirigami.Units.gridUnit * 10
+				width: 100
+			}
+		}
+
+		Row {
+			spacing: 20
+			Controls.Label {
+				text: i18n("Bar width: ")
+			}
+			Controls.SpinBox {
+				id: barWidthSpin
+				value: barWidth
+				Layout.preferredWidth: Kirigami.Units.gridUnit * 10
+				width: 100
+			}
+		}
+
+		Row {
+			spacing: 20
+			Controls.Label {
+				text: i18n("Gap: ")
+			}
+			Controls.SpinBox {
+				id: gapSpin
+				value: gap
+				Layout.preferredWidth: Kirigami.Units.gridUnit * 10
+				width: 100
+			}
+		}
+	}
+
 }
