@@ -8,13 +8,16 @@ Primarily designed as a sensor widget style for the **Plasma Panel**, this displ
 
 ## Installation
 
-You can install this sensor face directly from the KDE Plasma System Monitor, or follow these steps:
+This sensor face can be installed directly from the KDE Plasma System Monitor. Alternatively, you can manually install it by following these steps:
 
-1. Download the display style from the [releases](https://www.pling.com/p/1972690/) page or clone this repository.
+1. Download the appropriate display style from the [releases](https://www.pling.com/p/1972690/) page or clone this repository.
+   - For plasma 5.x, download the `+plasma5` version.
+   - For plasma 6.x, download the `+plasma6` version or switch to the `plasma6` branch.
 2. Extract the downloaded file to `~/.local/share/ksysguard/sensorfaces/org.gerrnperl.text/`
-3. Restart `Plasma shell` and `Plasma systemmonitors`.
+3. Restart the `Plasma shell` and `Plasma systemmonitors` for the changes to take effect.
 
 ## Screenshots
+![Screenshot](screenshots/Screenshot.png)
 
 ![style1](screenshots/style1.png)
 
